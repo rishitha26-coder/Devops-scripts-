@@ -1,0 +1,1 @@
+aws ec2 --profile=mogo --output=json describe-instances --query 'Reservations[].Instances[].{Name: Tags[?Key==`Name`].Value | [0], Description: Tags[?Key==`Description`].Value | [0], BillingCategory: Tags[?Key==`Billing Category`].Value | [0], ID: InstanceId, Type: InstanceType}' | jq -r '.[] | select(.BillingCategory == "Microsoft Dynamics CRM") | .ID'

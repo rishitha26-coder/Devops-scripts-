@@ -1,0 +1,21 @@
+#!/bin/bash -x
+
+shopt -s extglob
+
+mybranch="$(git branch --list --no-color 2>&1 | grep -v master | grep -v main | grep -v develop | grep '\*')"
+
+mybranch="${mybranch#* }"
+
+[[ -n "$mybranch" ]] || { echo "Invalid git repo, or trying to commit to master/develop. Aborting!" ; git branch --list ; exit 1 ; }
+
+mymessage="$@"
+
+if [[ ! -n "$mymessage" ]] ; then
+	echo "Please provide a commit message:"
+	read mymessage
+	[[ -n "$mymessage" ]] || { echo "Commit message required! Aborting!" ; exit 1 ;}
+fi
+
+git commit -a -m "${mybranch#*/} #in-progress #comment Commit to $(git config --get remote.origin.url | sed -e 's/.git$//g' -e 's/.*://g') - ${mymessage} #transition in-progress" || exit 1
+
+git push origin $mybranch

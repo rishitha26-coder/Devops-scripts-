@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#### This is a distillation of:
+## https://docs.aws.amazon.com/eks/latest/userguide/managing-vpc-cni.html
+## and
+## https://docs.aws.amazon.com/eks/latest/userguide/managing-ebs-csi.html
+##
+
+## If you have aws-node pods stuck in creating after running this, look and see if there's either an issue with your eks security group,
+## or else you could have a pod that's stuck in a terminating state, making aws-node unable to pre-empt the terminating pod
+
+CNI_VERSION=v1.12.6-eksbuild.1
+EBS_CSI_VERSION=v1.17.0-eksbuild.1
+
+export AWS_PROFILE=$1
+export EKS_CLUSTER=$2
+[[ -n "$3" ]] && export AWS_REGION="$3"
+aws sts get-caller-identity --output json | jq -r .Account || aws sso login --profile=${AWS_PROFILE}
+export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --output json | jq -r .Account)
+[[ -n "$AWS_ACCOUNT_ID" ]] || exit 1
+if [[ ! -n "$AWS_PROFILE" ]] || [[ ! -n "$EKS_CLUSTER" ]] || [[ ! -n "$AWS_ACCOUNT_ID" ]] ; then
+  echo "Usage: ${0} <AWS_PROFILE> <EKS_CLUSTER>"
+fi
+
+eksctl delete iamserviceaccount --name aws-node     --namespace kube-system     --cluster $EKS_CLUSTER && sleep 60s
+eksctl create iamserviceaccount     --name aws-node     --namespace kube-system     --cluster $EKS_CLUSTER     --role-name "AmazonEKSVPCCNIRole-$EKS_CLUSTER"     --attach-policy-arn arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy     --override-existing-serviceaccounts --approve || \
+  eksctl create iamserviceaccount     --name aws-node     --namespace kube-system     --cluster $EKS_CLUSTER     --role-name "AmazonEKSVPCCNIRole-$EKS_CLUSTER"     --attach-policy-arn arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy     --override-existing-serviceaccounts --approve || exit 1
+# This will run the second command if the first one fails
+aws eks delete-addon --cluster-name $EKS_CLUSTER --addon-name vpc-cni && sleep 60s
+aws eks update-addon --cluster-name $EKS_CLUSTER --addon-name vpc-cni --addon-version ${CNI_VERSION} --service-account-role-arn arn:aws:iam::${AWS_ACCOUNT_ID}:role/AmazonEKSVPCCNIRole-${EKS_CLUSTER} --resolve-conflicts OVERWRITE --configuration-values '{"env":{"ENABLE_PREFIX_DELEGATION":"true","WARM_PREFIX_TARGET":"1"}}' || \
+  aws eks create-addon --cluster-name $EKS_CLUSTER --addon-name vpc-cni --addon-version ${CNI_VERSION} --service-account-role-arn arn:aws:iam::${AWS_ACCOUNT_ID}:role/AmazonEKSVPCCNIRole-${EKS_CLUSTER} --resolve-conflicts OVERWRITE --configuration-values '{"env":{"ENABLE_PREFIX_DELEGATION":"true","WARM_PREFIX_TARGET":"1"}}' || exit 1
+# Delete all the aws-node pods so they re-create properly
+kubectl delete pods -n kube-system -l k8s-app=aws-node --context=${EKS_CLUSTER} && sleep 10s
+
+kubectl --context=$EKS_CLUSTER -n kube-system get pods -l k8s-app=aws-node
+
+eksctl create addon --name aws-ebs-csi-driver --cluster ${EKS_CLUSTER} --version ${EBS_CSI_VERSION} --service-account-role-arn arn:aws:iam::${AWS_ACCOUNT_ID}:role/AmazonEKS_EBS_CSI_DriverRole --force || \
+  eksctl update addon --name aws-ebs-csi-driver --version ${EBS_CSI_VERSION} --cluster ${EKS_CLUSTER} --service-account-role-arn arn:aws:iam::${AWS_ACCOUNT_ID}:role/AmazonEKS_EBS_CSI_DriverRole --force

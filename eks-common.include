@@ -1,0 +1,18 @@
+shopt -s extglob
+
+export ENVIRONMENT="$1"
+
+shift
+
+if [[ "$ENVIRONMENT" == @(staging|prod) ]] ; then
+	export EKS_ENV=eks-${ENVIRONMENT}
+else
+	export EKS_ENV=eks-shared
+fi
+
+if [[ "$ENVIRONMENT" != @(harness|mogo)* ]] ; then
+	export NAMESPACE=mogo-${ENVIRONMENT}
+else
+	export NAMESPACE=${ENVIRONMENT}
+fi
+

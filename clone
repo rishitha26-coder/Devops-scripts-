@@ -1,0 +1,25 @@
+#!/bin/bash
+
+shopt -s extglob
+
+cd ${HOME}/repos || exit 1
+
+ORG="$2"
+
+if [[ ! -n "$2" ]] ; then
+	ORG=mogofinancial
+fi
+
+repodir="$HOME/repos/${1}"
+
+if [[ -d "$repodir" ]] ; then
+	echo -n "Directory $repodir already exists. Backup and re-clone? (y/N)?"
+	read -n 1 answer
+	echo
+	[[ $answer == @(y|Y) ]] || exit 1
+	backupdir="$repodir.$(date +%F_%H-%M-%S)"
+	echo Moving $repodir to $backupdir
+	mv "$repodir" "$backupdir" || exit 1
+fi
+
+git clone git@github.com:${ORG}/${1}.git 

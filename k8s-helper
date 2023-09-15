@@ -1,0 +1,7 @@
+#!/bin/bash
+
+command="${0##*/k}"
+
+[[ -n "$AWS_PROFILE" ]] || export AWS_PROFILE=mogo-eks
+
+kubectl $command "$@"

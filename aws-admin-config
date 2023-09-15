@@ -1,0 +1,677 @@
+[default]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = us-west-2
+output = json
+
+[profile mogo-cre]
+region = us-west-2
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AdministratorAccess
+sso_account_id = 682432477060
+
+[profile mogo-qj-prod ]
+region = ca-central-1
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AdministratorAccess
+sso_account_id = 221952455296
+
+[profile mogo-qj-nonprod ]
+region = ca-central-1
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AdministratorAccess
+sso_account_id = 343977494553
+
+[profile mogo-devops]
+region = us-west-2
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AdministratorAccess
+sso_account_id = 013691678659
+
+[profile mogo-dev]
+region = us-west-2
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AdministratorAccess
+output = json
+sso_account_id = 013691678659
+
+[profile mogo-sec]
+region = us-west-2
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AdministratorAccess
+output = json
+sso_account_id = 660813029754
+
+[profile mogo-vpn]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 428180735908
+sso_role_name = AdministratorAccess
+region = us-west-2
+output = json
+
+[profile mogo-soa-staging]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 794525844981
+sso_role_name = AdministratorAccess
+region = us-west-2
+output = json
+
+[profile mogo-soa-nonprod]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 784932190261
+sso_role_name = AdministratorAccess
+region = ca-central-1
+output = json
+
+[profile mogo-soa-qa]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 187115610806
+sso_role_name = AdministratorAccess
+region = ca-central-1
+output = json
+
+[profile mogo-soa-nonprod-or]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 784932190261
+sso_role_name = AdministratorAccess
+region = us-west-2
+output = json
+
+[profile mogo-soa-prod]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 242342838833 
+sso_role_name = AdministratorAccess
+region = ca-central-1
+output = json
+
+[profile mogo-soa-prod-or]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 242342838833 
+sso_role_name = AdministratorAccess
+region = us-west-2
+output = json
+
+[profile mogo-soa-training]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 911155304672 
+sso_role_name = AdministratorAccess
+region = us-west-2
+output = json
+
+[profile mogo-soa-dev]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 291181341994 
+sso_role_name = AdministratorAccess
+region = us-west-2
+output = json
+
+[profile mogo]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 321435445134
+sso_role_name = AdministratorAccess
+region = us-west-2
+output = json
+
+[profile mogo-keyspaces]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 517987003044
+sso_role_name = AdministratorAccess
+region = us-west-2
+output = json
+
+[profile mogo-sandbox]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AdministratorAccess
+region = ca-central-1
+output = json
+sso_account_id = 717501217819
+
+[profile mogo-aaron]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AdministratorAccess
+region = us-west-2
+output = json
+sso_account_id = 817852786088
+
+[profile mogo-eks]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AdministratorAccess
+output = json
+region = us-west-2
+sso_account_id = 499820275383
+
+[profile moka-mogotrade-dev]
+sso_account_id = 967784801520
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile mogo-qjtrader-prod]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 221952455296
+sso_role_name = AdministratorAccess
+region = ca-central-1
+output = json
+
+[profile mogo-qjtrader-nonprod]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 343977494553
+sso_role_name = AdministratorAccess
+region = ca-central-1
+output = json
+
+# This is on the moka account, but is needed for scripts
+[profile mogo-ca-dev]
+sso_account_id = 967784801520
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-admin]
+sso_account_id = 967784801520
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-bi]
+sso_account_id = 203129162841
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-ca-dev]
+sso_account_id = 577228445694
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-ca-production]
+sso_account_id = 884216638433
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-ca-qa]
+sso_account_id = 597744537723
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-ca-staging]
+sso_account_id = 202550295096
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-fr-production]
+sso_account_id = 063320719169
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-fr-qa]
+sso_account_id = 484584344368
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-fr-staging]
+sso_account_id = 551691348450
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-identity]
+sso_account_id = 387476105059
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-master]
+sso_account_id = 387859881124
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-master-devlegacyrole]
+source_profile = moka-master
+role_arn = arn:aws:iam::387859881124:role/DevLegacyRole
+
+[profile moka-local]
+sso_account_id = 984207016720
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-logging]
+sso_account_id = 571743146569
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-main]
+sso_account_id = 387859881124
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-sandbox-dramier]
+sso_account_id = 130303446818
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-sandbox-jdupre]
+sso_account_id = 873349603721
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-sandbox-vveysset]
+sso_account_id = 598491262409
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-security]
+sso_account_id = 501736487769
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-shared]
+sso_account_id = 518256448906
+sso_role_name = AdministratorAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+#### Following are readonly access accounts for each profile above
+[profile mogo-cre-ro]
+region = us-west-2
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AWSReadOnlyAdminAccess
+sso_account_id = 682432477060
+
+[profile mogo-devops-ro]
+region = us-west-2
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AWSReadOnlyAdminAccess
+sso_account_id = 013691678659
+
+[profile mogo-dev-ro]
+region = us-west-2
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AWSReadOnlyAdminAccess
+output = json
+sso_account_id = 013691678659
+
+[profile mogo-sec-ro]
+region = us-west-2
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AWSReadOnlyAdminAccess
+output = json
+sso_account_id = 660813029754
+
+[profile mogo-vpn-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 428180735908
+sso_role_name = AWSReadOnlyAdminAccess
+region = us-west-2
+output = json
+
+[profile mogo-soa-staging-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 794525844981
+sso_role_name = AWSReadOnlyAdminAccess
+region = us-west-2
+output = json
+
+[profile mogo-soa-nonprod-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 784932190261
+sso_role_name = AWSReadOnlyAdminAccess
+region = ca-central-1
+output = json
+
+[profile mogo-soa-qa-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 187115610806
+sso_role_name = AWSReadOnlyAdminAccess
+region = ca-central-1
+output = json
+
+[profile mogo-soa-nonprod-or-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 784932190261
+sso_role_name = AWSReadOnlyAdminAccess
+region = us-west-2
+output = json
+
+[profile mogo-soa-prod-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 242342838833 
+sso_role_name = AWSReadOnlyAdminAccess
+region = ca-central-1
+output = json
+
+[profile mogo-soa-prod-or-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 242342838833 
+sso_role_name = AWSReadOnlyAdminAccess
+region = us-west-2
+output = json
+
+[profile mogo-soa-training-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 911155304672 
+sso_role_name = AWSReadOnlyAdminAccess
+region = us-west-2
+output = json
+
+[profile mogo-soa-dev-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 291181341994 
+sso_role_name = AWSReadOnlyAdminAccess
+region = us-west-2
+output = json
+
+[profile mogo-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 321435445134
+sso_role_name = AWSReadOnlyAdminAccess
+region = us-west-2
+output = json
+
+[profile mogo-keyspaces-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 517987003044
+sso_role_name = AWSReadOnlyAdminAccess
+region = us-west-2
+output = json
+
+[profile mogo-sandbox-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AWSReadOnlyAdminAccess
+region = ca-central-1
+output = json
+sso_account_id = 717501217819
+
+[profile mogo-aaron-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AWSReadOnlyAdminAccess
+region = us-west-2
+output = json
+sso_account_id = 817852786088
+
+[profile mogo-eks-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_role_name = AWSReadOnlyAdminAccess
+output = json
+region = us-west-2
+sso_account_id = 499820275383
+
+[profile moka-mogotrade-dev-ro]
+sso_account_id = 967784801520
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile mogo-qjtrader-prod-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 221952455296
+sso_role_name = AWSReadOnlyAdminAccess
+region = ca-central-1
+output = json
+
+[profile mogo-qjtrader-nonprod-ro]
+sso_start_url = https://mogo.awsapps.com/start
+sso_region = ca-central-1
+sso_account_id = 343977494553
+sso_role_name = AWSReadOnlyAdminAccess
+region = ca-central-1
+output = json
+
+# This is on the moka account, but is needed for scripts
+[profile mogo-ca-dev-ro]
+sso_account_id = 967784801520
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-admin-ro]
+sso_account_id = 967784801520
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-bi-ro]
+sso_account_id = 203129162841
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-ca-dev-ro]
+sso_account_id = 577228445694
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-ca-production-ro]
+sso_account_id = 884216638433
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-ca-qa-ro]
+sso_account_id = 597744537723
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-ca-staging-ro]
+sso_account_id = 202550295096
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-fr-production-ro]
+sso_account_id = 063320719169
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-fr-qa-ro]
+sso_account_id = 484584344368
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-fr-staging-ro]
+sso_account_id = 551691348450
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-identity-ro]
+sso_account_id = 387476105059
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-master-ro]
+sso_account_id = 387859881124
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-local-ro]
+sso_account_id = 984207016720
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-logging-ro]
+sso_account_id = 571743146569
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-main-ro]
+sso_account_id = 387859881124
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-sandbox-dramier-ro]
+sso_account_id = 130303446818
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-sandbox-jdupre-ro]
+sso_account_id = 873349603721
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-sandbox-vveysset-ro]
+sso_account_id = 598491262409
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-security-ro]
+sso_account_id = 501736487769
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1
+
+[profile moka-shared-ro]
+sso_account_id = 518256448906
+sso_role_name = AWSReadOnlyAdminAccess
+sso_start_url = https://d-9d672a2aa0.awsapps.com/start
+sso_region = ca-central-1
+output = json
+region = ca-central-1

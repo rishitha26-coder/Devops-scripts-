@@ -1,0 +1,11 @@
+~/
+
+
+~.~.
+
+
+#!/bin/bash
+
+for account in mogo mogo-eks
+
+for bu in it mogo fs 
